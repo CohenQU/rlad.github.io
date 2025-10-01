@@ -12,7 +12,7 @@
     />
     <meta property="og:url" content="https://cohenqu.github.io/rlad.github.io/" />
     <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
-    <meta property="og:image" content="static/image/overview.png" />
+    <meta property="og:image" content="static/images/workflow.png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
 
@@ -24,15 +24,15 @@
     <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
     <meta
       name="twitter:image"
-      content="static/image/overview.png"
+      content="static/images/workflow.png"
     />
-    <meta name="twitter:card" content="static/image/overview.png" />
+    <meta name="twitter:card" content="static/images/workflow.png" />
     <!-- Keywords for your paper to be indexed by-->
     <meta name="keywords" content="RLAD: RL through Abstraction Discovery" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>RLAD</title>
-    <link rel="icon" type="image/x-icon" href="static/images/icon.png" />
+    <link rel="icon" type="image/x-icon" href="static/images/logo.png" />
     <link
       href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
       rel="stylesheet"
@@ -218,6 +218,17 @@
                 <li>They can generalize across problems — helping models recognize shared substructures or common pitfalls.</li>
               </ul>
               <p>Empirically, conditioning on abstractions boosts accuracy and pass@k across math reasoning, ARC program synthesis, and even non-math domains like legal reasoning and healthcare.</p>
+              <div style="display: flex; justify-content: center; gap: 20px; align-items: center;"><img
+                  src="static/images/hint_examples-1.png"
+                  alt="Workflow"
+                  width="100%"
+                />
+              </div>
+              <div class="content has-text-justified">
+                <p style="font-size: small; color: #444; margin-top: 8px;">
+                  <strong>Figure:</strong> Examples of good reasoning abstractions in non-math domains. Adding the abstraction to the prompt of GPT-4o-mini consistently improves performance on unseen instances.
+                </p>
+              </div>
             </div>
           </div>
         </div>
@@ -324,6 +335,18 @@
               <div class="content has-text-justified">
                 <p style="font-size: small; color: #444; margin-top: 8px;">
                   <strong>Table:</strong> Accuracy on math reasoning benchmarks. RLAD achieves consistent gains in both abstraction-conditioned and w/o abstraction settings across AIME 2025, DeepScaleR Hard, and AMC 2023. We report performance without abstractions, with abstractions (pass@1 with 16 samples), and the best abstraction (pass@16).
+                </p>
+              </div>
+              <p>A typical example of a reasoning abstraction proposed by our abstraction generator.</p>
+              <div style="display: flex; justify-content: center; gap: 20px; align-items: center;"><img
+                  src="static/images/math_abstraction_example-1.png"
+                  alt="Workflow"
+                  width="100%"
+                />
+              </div>
+              <div class="content has-text-justified">
+                <p style="font-size: small; color: #444; margin-top: 8px;">
+                  <strong>Figure:</strong> In the solution, we see references to the abstraction and keywords from the abstraction being used meaningfully in the reasoning trace of the solution generator model.
                 </p>
               </div>
               
