@@ -60,72 +60,279 @@
       };
     </script>
   </head>
-    <section class="hero">
-      <div class="hero-body">
-        <div class="container is-max-desktop">
-          <div class="columns is-centered">
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h2 class="title is-2 publication-title ">
+              Training LLMs to Discover Abstractions for Solving Reasoning Problems
+            </h2>
+            <div class="is-size-5 publication-authors">
+              <!-- Paper authors -->
+              <span class="author-block">
+                <a href="https://cohenqu.github.io/" target="_blank"
+                  >Yuxiao Qu<sup>1</sup></a
+                >
+                ,
+              </span>
+              <span class="author-block">
+                <a href="https://asap7772.github.io/" target="_blank"
+                  >Anikait Singh<sup>2</sup></a
+                >,
+              </span>
+              <span class="author-block">
+                <a href="https://yoonholee.com/" target="_blank"
+                  >Yoonho Lee<sup>3</sup></a
+                >,
+              </span>
+              <span class="author-block">
+                <a href="https://aviralkumar2907.github.io/" target="_blank"
+                  >Amrith Setlur<sup>1</sup></a
+                >
+              </span>
+              ,
+              <br>
+              <span class="author-block">
+                <a href="https://www.cs.cmu.edu/~rsalakhu/" target="_blank"
+                  >Ruslan Salakhutdinov<sup>1</sup></a
+                >
+              </span>
+              ,
+              <span class="author-block">
+                <a href="https://ai.stanford.edu/~cbfinn/" target="_blank"
+                  >Chelsea Finn<sup>1</sup></a
+                >
+              </span>
+              ,
+              <span class="author-block">
+                <a href="https://aviralkumar2907.github.io/" target="_blank"
+                  >Aviral Kumar<sup>1</sup></a
+                >
+              </span>
+            </div>
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">
+                <span class="author-block"><sup>1</sup>Carnegie Mellon University</span>
+                <span class="author-block"><sup>2</sup>Stanford University</span>
+                <span class="author-block"><sup>❖</sup>Equal Contribution</span>
+              </span>
+            </div>
+
             <div class="column has-text-centered">
-              <h2 class="title is-2 publication-title ">
-                Learning to Discover Abstractions for LLM Reasoning
-              </h2>
-
-              <div class="is-size-5 publication-authors">
-                <span class="author-block">
-                  <sup>1</sup>Carnegie Mellon University,
-                  <sup>2</sup>HuggingFace, 
-                  <sup>*</sup>Equal Contribution
+              <div class="publication-links">
+                <!-- ArXiv abstract Link -->
+                <span class="link-block">
+                  <a
+                    href=""
+                    target="_blank"
+                    class="external-link button is-normal is-rounded is-dark"
+                  >
+                    <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                    </span>
+                    <span>arXiv</span>
+                  </a>
                 </span>
-              </div>
 
-              <div class="column has-text-centered">
-                <div class="publication-links">
-                  <!-- ArXiv abstract Link -->
-                  <span class="link-block">
-                    <a
-                      href="http://arxiv.org/abs/2503.07572"
-                      target="_blank"
-                      class="external-link button is-normal is-rounded is-dark"
-                    >
-                      <span class="icon">
-                        <i class="ai ai-arxiv"></i>
-                      </span>
-                      <span>arXiv</span>
-                    </a>
-                  </span>
+                <!-- <span class="link-block">
+                  <a
+                    href="https://www.youtube.com/watch?v=Qv8aTLthfhs"
+                    target="_blank"
+                    class="external-link button is-normal is-rounded is-dark"
+                  >
+                    <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                    </span>
+                    <span>Video</span>
+                  </a>
+                </span> -->
 
-                  <!-- <span class="link-block">
-                    <a
-                      href="https://www.youtube.com/watch?v=Qv8aTLthfhs"
-                      target="_blank"
-                      class="external-link button is-normal is-rounded is-dark"
-                    >
-                      <span class="icon">
-                        <i class="fab fa-youtube"></i>
-                      </span>
-                      <span>Video</span>
-                    </a>
-                  </span> -->
-
-                  <!-- Github link -->
-                  <span class="link-block">
-                    <a
-                      href="https://github.com/CMU-AIRe/MRT"
-                      target="_blank"
-                      class="external-link button is-normal is-rounded is-dark"
-                    >
-                      <span class="icon">
-                        <i class="fab fa-github"></i>
-                      </span>
-                      <span>Code</span>
-                    </a>
-                  </span>
-                </div>
+                <!-- Github link -->
+                <!-- <span class="link-block">
+                  <a
+                    href="https://github.com/CMU-AIRe/MRT"
+                    target="_blank"
+                    class="external-link button is-normal is-rounded is-dark"
+                  >
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code</span>
+                  </a>
+                </span> -->
               </div>
             </div>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
+  <section class="hero teaser">
+    <div class="container is-max-desktop">
+      <div class="hero-body">
+        <div class="has-text-centered">
+          <div class="text-center">
+            <img src="static/images/fig1.png" alt="Reinforcement Learning through Abstraction Discovery" class="mx-auto"/>
+          </div>
+        </div>
+        <p class="tw-text-left tw-text-sm tw-text-gray-500 tw-mt-4">
+        <b>Standard reasoning vs. Reasoning abstractions.</b> We depict the solution space as a graph of intermediate steps leading to correct or incorrect answers. (1) Standard reasoning explores this space along one sequential chain. (2) We generate textual abstractions by summarizing which intermediate steps led to which outcomes. (3) Such abstractions can be reused to guide reasoning more efficiently.
+        </p>    
+      </div>
+    </div>
+  </section>
+
+  <section class="section hero is-light">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified">
+            <p>
+              Reasoning requires going beyond pattern matching or memorization of solutions to identify and implement "algorithmic procedures" that can be used to deduce answers to hard problems. Doing so requires reusing primitives, intermediate results, or procedures across multiple problems. While RL post-training on long chains of thought ultimately aims to uncover this kind of algorithmic behavior, the depth-first and "brute-force" nature of reasoning traces learned by these models suggests that this is far from a fulfilled promise. To address more effective reasoning, we introduce <i>reasoning abstractions</i>: concise natural language descriptions of procedural and factual knowledge that guide the model toward learning successful reasoning. We train models to be capable of proposing several useful abstractions given a problem, followed by RL training that incentivizes building a solution while using the information provided by these abstractions. This results in a two-player RL training paradigm, abbreviated as <b>RLAD</b>, that jointly trains an abstraction generator and an abstraction-conditioned solution generator. This setup effectively enables structured exploration, decouples learning signals of abstraction proposal and solution generation, and improves generalization to harder problems. We also show that spending more test-time compute into generating abstractions is more beneficial for performance than generating more solutions at large inference-time budgets, illustrating the role of abstractions in guiding global exploration.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="section" , id="Reasoning Abstractions and Why They Are Useful">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column is-full-width">
+          <h2 class="title is-3" id="setup">Reasoning Abstractions and Why They Are Useful</h2>
+            <!-- <h3 class="title is-4">Experiment Setup</h3> -->
+            <div class="content has-text-justified">
+              <p>Solving hard reasoning problems requires more than lengthening chains of thought — it requires reusable insights.</p>
+              <p>Reasoning abstractions are short natural-language descriptions that capture:</p>
+              <ul>
+                <li><b>Procedural knowledge</b> (e.g., “apply the quadratic formula in modular arithmetic”).</li>
+                <li><b>Factual knowledge</b> (e.g., "a number has an inverse mod m only if gcd(x, m) = 1").</li>
+                <li><b>Cautionary patterns</b> (e.g., "avoid assuming a denominator is invertible without checking").</li>
+              </ul>
+              <p>These abstractions summarize what works and what fails across multiple solution attempts. When provided to LLMs:</p>
+              <ul>
+                <li>They act like <b>exam hints</b>, guiding the model toward more promising strategies.</li>
+                <li>They improve exploration by broadening the search space beyond sequential brute force.</li>
+                <li>They can generalize across problems — helping models recognize shared substructures or common pitfalls.</li>
+              </ul>
+              <p>Empirically, conditioning on abstractions boosts accuracy and pass@k across math reasoning, ARC program synthesis, and even non-math domains like legal reasoning and healthcare.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="section" , id="RLAD Framework">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column is-full-width">
+          <h2 class="title is-3" id="setup">RLAD Framework</h2>
+            <!-- <h3 class="title is-4">Experiment Setup</h3> -->
+             <div style="display: flex; justify-content: center; gap: 20px; align-items: center;"><img
+                  src="static/images/workflow.png"
+                  alt="Workflow"
+                  width="100%"
+                />
+              </div>
+            <div class="content has-text-justified">
+              <p>RLAD jointly trains:</p>
+              <ul>
+                <li><b>Abstraction Generator</b> – proposes problem-specific abstractions.</li>
+                <li><b>Solution Generator</b> – learns to solve problems by leveraging abstractions.</li>
+              </ul>
+              <p>Training proceeds in two phases:</p>
+              <ul>
+                <li><b>Warm-start with supervised fine-tuning</b> on abstraction – solution pairs from stronger models.</li>
+                <li><b>Reinforcement learning</b> where abstractions are rewarded if they improve the success rate of solution generation.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="section" , id="Experimental Results">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column is-full-width">
+          <h2 class="title is-3" id="setup">Experimental Results</h2>
+            <!-- <h3 class="title is-4">Experiment Setup</h3> -->
+             <div class="content has-text-justified">
+              <p>Main Performance Results on Math Reasoning Benchmarks</p>
+              <table style="width: 100%; border-collapse: collapse; font-size:small; line-height:1.2; font-family: Arial, sans-serif; margin: 20px 0; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);">
+                <thead>
+                  <tr style="background-color: #66cc995b;">
+                    <th style="color: black; padding: 10px; text-align: left; border: 1px solid #ddd;">Approach</th>
+                    <th style="color: black; padding: 10px; text-align: center; border: 1px solid #ddd;" colspan="3">AIME 2025</th>
+                    <th style="color: black; padding: 10px; text-align: center; border: 1px solid #ddd;" colspan="3">DeepScaleR [Hard]</th>
+                    <th style="color: black; padding: 10px; text-align: center; border: 1px solid #ddd;" colspan="3">AMC 2023</th>
+                  </tr>
+                  <tr style="background-color: #f9f9f9;">
+                    <th></th>
+                    <th style="padding: 8px; border: 1px solid #ddd;">w/o abs (avg)</th>
+                    <th style="padding: 8px; border: 1px solid #ddd;">w/ abs (avg)</th>
+                    <th style="padding: 8px; border: 1px solid #ddd;">w/ abs (best)</th>
+                    <th style="padding: 8px; border: 1px solid #ddd;">w/o abs (avg)</th>
+                    <th style="padding: 8px; border: 1px solid #ddd;">w/ abs (avg)</th>
+                    <th style="padding: 8px; border: 1px solid #ddd;">w/ abs (best)</th>
+                    <th style="padding: 8px; border: 1px solid #ddd;">w/o abs (avg)</th>
+                    <th style="padding: 8px; border: 1px solid #ddd;">w/ abs (avg)</th>
+                    <th style="padding: 8px; border: 1px solid #ddd;">w/ abs (best)</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr style="background-color: #f2f2f2;">
+                    <td style="padding: 8px; text-align: left; border: 1px solid #ddd; font-weight: bold;">Qwen-3-1.7B</td>
+                    <td style="padding: 8px; border: 1px solid #ddd;">33.75</td>
+                    <td style="padding: 8px; border: 1px solid #ddd;">36.25</td>
+                    <td style="padding: 8px; border: 1px solid #ddd;">40.00</td>
+                    <td style="padding: 8px; border: 1px solid #ddd;">20.21</td>
+                    <td style="padding: 8px; border: 1px solid #ddd;">22.14</td>
+                    <td style="padding: 8px; border: 1px solid #ddd;">32.50</td>
+                    <td style="padding: 8px; border: 1px solid #ddd;">86.41</td>
+                    <td style="padding: 8px; border: 1px solid #ddd;">78.01</td>
+                    <td style="padding: 8px; border: 1px solid #ddd;">84.53</td>
+                  </tr>
+                  <tr>
+                    <td style="padding: 8px; text-align: left; border: 1px solid #ddd;">+ DAPO</td>
+                    <td style="padding: 8px; border: 1px solid #ddd;">37.92</td>
+                    <td style="padding: 8px; border: 1px solid #ddd;">34.90</td>
+                    <td style="padding: 8px; border: 1px solid #ddd;">39.79</td>
+                    <td style="padding: 8px; border: 1px solid #ddd;">21.67</td>
+                    <td style="padding: 8px; border: 1px solid #ddd;">21.88</td>
+                    <td style="padding: 8px; border: 1px solid #ddd;">33.54</td>
+                    <td style="padding: 8px; border: 1px solid #ddd;">86.41</td>
+                    <td style="padding: 8px; border: 1px solid #ddd;">81.99</td>
+                    <td style="padding: 8px; border: 1px solid #ddd;">88.44</td>
+                  </tr>
+                  <tr style="background-color: #FFD95F;">
+                    <td style="padding: 8px; text-align: left; border: 1px solid #ddd; font-weight: bold;">+ RLAD</td>
+                    <td style="padding: 8px; border: 1px solid #ddd; font-weight: bold;">38.04</td>
+                    <td style="padding: 8px; border: 1px solid #ddd; font-weight: bold;">42.45</td>
+                    <td style="padding: 8px; border: 1px solid #ddd; font-weight: bold;">48.33</td>
+                    <td style="padding: 8px; border: 1px solid #ddd; font-weight: bold;">23.54</td>
+                    <td style="padding: 8px; border: 1px solid #ddd; font-weight: bold;">24.84</td>
+                    <td style="padding: 8px; border: 1px solid #ddd; font-weight: bold;">35.54</td>
+                    <td style="padding: 8px; border: 1px solid #ddd; font-weight: bold;">87.25</td>
+                    <td style="padding: 8px; border: 1px solid #ddd; font-weight: bold;">88.35</td>
+                    <td style="padding: 8px; border: 1px solid #ddd; font-weight: bold;">91.72</td>
+                  </tr>
+                </tbody>
+              </table>
+              <div class="content has-text-justified">
+                <p style="font-size: small; color: #444; margin-top: 8px;">
+                  <strong>Table:</strong> Accuracy on math reasoning benchmarks. RLAD achieves consistent gains in both abstraction-conditioned and w/o abstraction settings across AIME 2025, DeepScaleR Hard, and AMC 2023. We report performance without abstractions, with abstractions (pass@1 with 16 samples), and the best abstraction (pass@16).
+                </p>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
     <footer class="footer">
       <div class="container">
